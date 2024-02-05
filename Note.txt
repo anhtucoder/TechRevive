@@ -1,0 +1,2 @@
+Để kết nối sql 
+Tạo csdl tên là : sqldoanvd trong myPhpAdmin và nhập file sqldoandv.sql

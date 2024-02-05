@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang chủ</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+
+</head>
+
+<body>
+    <div class="container-fluid p-4 bg-dark text-white text-center">
+        <h1>
+            TechRevive
+        </h1><br>
+        <ul class="nav justify-content-center bg-light ">
+            <li class="nav-item">
+                <a class="nav-link  text-dark" aria-current="page" href="/introduct">Giới thiệu</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/">Nhập thiết bị</a>
+            </li>
+            <!-- <li class="nav-item">
+                <a class="nav-link text-dark" href="/dstb">Danh sách</a>
+            </li> -->
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/contact">Liên Hệ</a>
+            </li>
+        </ul>
+    </div> <br> <br>
+    <div class="container-sm vh-100 form-body">
+        <div class="row">
+            <div class="form-holder">
+                <div class="form-content">
+                    <div class="form-items">
+                        <h2>Phiếu thiết bị </h2>
+                        <form class="requires-validation" method="POST" action="/insertkh">
+                            <div class="col-md-12">
+                                <input class="form-control" type="text" name="name" placeholder="Nhập họ và tên ">
+                            </div><br>
+                            <div class="col-md-12">
+                                <input class="form-control" type="text" name="sdt" placeholder="Nhập số điện thoại ">
+                            </div><br>
+                            <div class="col-md-12">
+                                <input class="form-control" type="text" name="address" placeholder="Nhập địa chỉ  ">
+                            </div><br>
+                            <div class="col-md-12">
+                                <label for="">Danh sách thiết bị </label>
+                                <select class="form-select mt-3" name="listdevice">
+                                    <option selected disabled value="Card cảnh báo ZTE">Card cảnh báo ZTE</option>
+                                    <option value="Card giao tiếp ZTE">Card giao tiếp ZTE</option>
+                                    <option value="Card thu phát kép 2G HW">Card thu phát kép 2G HW</option>
+                                    <option value="Quạt HW">Quạt HW</option>
+                                    <option value="Cpu intel">Cpu intel</option>
+                                    <option value="Card nvdia">Card nvdia</option>
+                                    <option value="Nguồn 600W">Nguồn 600W</option>
+                                    <option value="Ram 8gb">Ram 8gb</option>
+                                    <option value="Quạt HZTE">Quạt ZTE</option>
+                                </select>
+                            </div> <br>
+                            <div class="col-md-12">
+                                <input class="form-control" type="text" name="error" placeholder="Lỗi thiết bị">
+                            </div><br>
+                            <div class="col-md-12">
+                                <input class="form-control" type="text" name="note" placeholder="ghi chú">
+                            </div> <br>
+                            <div class="col-md-3">
+                                <input class="form-control" type="number" name="hdid" placeholder="ma hop dong"
+                                    value="<%= Math.floor(Math.random()*100) %>" hidden>
+                            </div>
+                            <div class="col-md-3">
+                                <input class="form-control" type="text" name="dvid" placeholder="ma thiet bi"
+                                    value="<%=  String.fromCharCode(65+ Math.floor(Math.random()*26)) +  Math.floor(Math.random()*10) %> "
+                                    hidden>
+                            </div>
+                            <div class="form-button mt-3">
+                                <button type="submit" class="btn btn-primary">Gửi phiếu </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="bg-light text-center text-lg-start">
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2023 Copyright:
+            <a class="text-dark" href="https://www.facebook.com/profile.php?id=100028859328089">Anh Tu'</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+</body>
+
+</html>

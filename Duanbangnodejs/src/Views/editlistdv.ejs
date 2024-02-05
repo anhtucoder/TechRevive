@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang chủ</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <div class="container-fluid p-4 bg-primary text-white text-center">
+        <h1>
+            Admin
+        </h1><br>
+        <ul class="nav justify-content-center bg-light ">
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/readlist">Danh sách hợp đồng</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/exportlist">Xuất hợp đồng </a>
+            </li>
+        </ul>
+    </div> <br> <br>
+    <div class="container-sm vh-100 form-body">
+        <div class="row">
+            <div class="form-holder">
+                <div class="form-content">
+                    <div class="form-items">
+                        <h2>Nhập thông tin </h2> <br>
+                        <form class="requires-validation" method="POST" action="/insertlist">
+                            <div class="col-md-12">
+                                <label for="">Người phụ trách</label> <br>
+                                <input class="form-control" type="text" name="phutrach" value=" ">
+                            </div>
+                            <div class="col-md-12">
+                                <label for="">Ngày nhận</label>
+                                <input class="form-control" type="date" id="date1" name="ngaynhan" value=" ">
+                            </div>
+                            <div class="col-md-12">
+                                <label for="">Ngày sửa</label>
+                                <input class="form-control" type="date" id="date2" name="ngaysua" value=" ">
+                            </div>
+                            <div class="col-md-12">
+                                <label for="">Thời gian bảo hành</label>
+                                <input class="form-control" type="date" name="ngaybaohanh" value=" ">
+                            </div>
+                            <div class="col-md-12">
+                                <label for="">Phí thanh toán</label>
+                                <input class="form-control" type="number" name="phithanhtoan" value=" ">
+                            </div>
+                            <div class="col-md-12">
+                                <label for="">Thanh Toán</label>
+                                <select class="form-select mt-3" name="thanhtoan">
+                                    <option selected disabled>Chọn</option>
+                                    <option value="Chưa Thanh Toán">Chưa Thanh Toán</option>
+                                    <option value="Đã Thanh Toán">Đã Thanh Toán</option>
+                                </select>
+                            </div>
+                            <div class="col-md-12"> <br>
+                                <label for="">Ghi chú</label>
+                                <input class="form-control" type="text" name="note" value=" ">
+                            </div>
+                            <div class="col-md-12">
+                                <input class="form-control" type="text" name="hdid" value="<%= user.hdid %> " hidden>
+                            </div>
+                            <div class="col-md-12">
+                                <input class="form-control" type="text" name="name" value="<%= user.name %> " hidden>
+                            </div>
+                            <div class="col-md-12">
+                                <input class="form-control" type="text" name="sdt" value="<%= user.sdt %>  " hidden>
+                            </div>
+                            <div class="col-md-12">
+                                <input class="form-control" type="text" name="dvid" value="<%= user.dvid %>  " hidden>
+                            </div>
+                            <div class="col-md-12">
+                                <input class="form-control" type="text" name="listdevice"
+                                    value=" <%= user.listdevice %> " hidden>
+                            </div>
+                            <div class="col-md-12">
+                                <input class="form-control" type="text" name="error" value="<%= user.error %>  " hidden>
+                            </div>
+                            <div class="form-button mt-3">
+                                <button type="submit" class="btn btn-primary">Đã Xong</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="bg-light text-center text-lg-start">
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2023 Copyright:
+            <a class="text-dark" href="https://www.facebook.com/profile.php?id=100028859328089">Anh Tu'</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+</body>
+
+</html>
